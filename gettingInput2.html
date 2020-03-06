@@ -8,22 +8,107 @@
                 text-align: center;
                 color: red;
             }
+            #details{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 20%;
+                padding-top: 40px;
+                
+            }
+            #tbl1{
+                
+                color: black;
+                font-weight: bold;
+            }
+            #calculate{
+                
+                background-color: white;
+                color: black;
+                border: 2px solid gray;
+                cursor: pointer;
+                
+            }
+            
             
         </style>
     </head>
     <body>
         
-        <p id="welcome"></p>
+        <h1 id="welcome">Javascript Add Two Values</h1>
+        <div id="details">
+            <table id=tbl1>
+
+                <tr>
+
+                    <td>
+                        <label>Enter Number1:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="num1" id="num1"/>
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>
+                        <label>Enter Number2:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="num2" id="num2"/>
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>
+                        &nbsp;
+                    </td>
+                    <td>
+                        <input type="button" value="calculate" onCLick="Calculate()" id="calculate"/>
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>
+                        <label>Result</label>
+                    </td>
+                    <td>
+                        <input type="text" name="num3" id="num3" readonly/>
+                    </td>
+
+                </tr>
+
+
+
+            </table>
+        </div>
     
         <script>
         
-            var num1 = prompt("Enter First Number: ");
-            var num2 = prompt("Enter Second Number: ");
-            var sum = parseInt(num1)+parseInt(num2);
+            //var num1 = prompt("Enter First Number: ");
+            //var num2 = prompt("Enter Second Number: ");
+            //var sum = parseInt(num1)+parseInt(num2);
             //window.alert(msg);
-            document.write(sum);
+            //document.write(sum);
             //document.getElementById("welcome").innerHTML(msg);this was wrong
             //document.getElementById("welcome").innerHTML = msg;
+            
+            function Calculate(){
+                //document.write("hello");
+                var num1 = parseInt(document.getElementById("num1").value);
+                var num2 = parseInt(document.getElementById("num2").value);
+                var sum = num1+num2;
+                //document.write(sum);
+                //document.getElementById("num3").innerHTML = sum;
+                document.getElementById("num3").value=sum;
+                
+            }
+            
         
         </script>
     
