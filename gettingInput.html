@@ -1,0 +1,32 @@
+<html>
+
+    <head><title>Javasript Title</title>
+    
+        <style>
+        
+            #welcome{
+                text-align: center;
+                color: red;
+            }
+            
+        </style>
+    </head>
+    <body>
+        
+        <p id="welcome"></p>
+    
+        <script>
+        
+            var name = prompt("Enter Your Name: ");
+            var msg = "welcome "+name;
+            //window.alert(msg);
+            //document.write(msg);
+            //document.getElementById("welcome").innerHTML(msg);this was wrong
+            document.getElementById("welcome").innerHTML = msg;
+        
+        </script>
+    
+    
+    </body>
+
+</html>
